@@ -12,24 +12,18 @@ header-includes:
 - PHY410: Do problems 1–3
 - PHY 505: Do problems 1-4
 
-Accept the assignment from "Classroom 50" website": https://classroom.github.com/a/tK--iBmU. This will create a new repository for you on github, titled something like `github.com/ubsuny/compphys-fall2026-assignment1-username`.
+Accept the assignment from "Classroom 50" website: <https://classroom50.org/ubsuny/compphys-fall26/assignments/assignment-1/accept>. This will create a new repository for you on github, titled something like `github.com/ubsuny/ubsuny/compphys-fall26-assignment-1-username`. The repository is located in the `ubsuny` github group, but it is your personal repository, and only you can view it. Technical detail: the repository is actually not a fork, but rather a brand new repository created by directly copying files from a "template repository."
 
 The assignment requires two uploads:
-1. Submit a writeup/lab report to UBLearns
-2. Upload your code through Classroom 50 (i.e., `git push` to your repository on GitHub)
 
-The writeup should contain your complete solutions to the problems in writing. Feel free to use any format: latex, markdown, etc. For assignments using Jupyter notebooks, you can also do your writeup inside the notebook using Markdown cells, export the notebook to HTML/PDF/etc. (this may require some additional setup), and upload the exported notebook.
+1. **Submit a writeup/lab report to UBLearns.** The writeup should contain your complete solutions to the problems in writing. Feel free to use any format: latex, markdown, etc. For assignments using Jupyter notebooks, you can also do your writeup inside the notebook using Markdown cells, export the notebook to HTML/PDF/etc. (this may require some additional setup), and upload the exported notebook.
+2. **Upload your code through Classroom 50.** This just means to `git push` any code you wrote to your GitHub repository. You can push as many times as you like before the due date (in fact, this is a good idea, as it serves as a backup; nothing will be graded before the due date).
 
 \newpage
 
 
 ## Problem 1
 *25 points*
-
-Representing data in binary and other formats
-
-### Problem 1a
-*15 points*
 
 What are the two's complement representations for the following numbers? Use N=16 bits.
 
@@ -40,18 +34,7 @@ What are the two's complement representations for the following numbers? Use N=1
    - -1023
    - -1024
 
-### Problem 1b
-*10 points*
-
-Convert the two's complement representations of the following numbers to hexadecimal, again using N=16 bits.
-
-- 13
-- -13
-- 2047
-- -2047
-
-\newpage
-
+---
 
 ### Problem 2
 *25 points*
@@ -71,8 +54,7 @@ What is the maximum $n$ that can be stored in the following C++ data types, assu
    - `long int`
    - `unsigned long int`
 
-\newpage
-
+---
 
 ## Problem 3
 *25 points*
@@ -86,30 +68,42 @@ Importantly, the series is implement using a simple *recursive function* that en
 
 Compile and execute the program. For example:
 ```bash
-g++ Problem3.cpp -o Problem3.exe
-./Problem3.exe
+g++ Problem3.cpp -o Problem3
+./Problem3
 ```
-(The `.exe` extension is not necessary, but can help to distinguish the executable program from other file types. MacOS users can use `clang++` instead of `g++`; your pixi environment probably installed `clang++` and not `g++`.)
+(MacOS users can use `clang++` instead of `g++`; your pixi environment probably installed `clang++` and not `g++`.)
 
 Does the program find the boundary where overflow occurs? If not, modify the program accordingly. In your writeup, include the full output of the program.
 
 ### Problem 3b
 *15 points*
+
 Does the boundary match what your answer from Problem 2? Explain why or why not. 
 
-\newpage
-
+---
 
 ## Problem 4
 *25 points*
 
-**PHY505 students only** (PHY410 students are welcome to submit, but it will not count towards the grade)
+**PHY505 students only** 
+
+PHY410 students are welcome to submit, but it will not count towards the grade.
 
 ### Problem 4a
 *15 points*
-Copy `Problem3.cpp` to `Problem4.cpp` and modify the new program to test additional data types: `int`, `long int`, and `unsigned long int`. Make sure to extend the $f_n$ series far enough to find the overflow boundary. In your writeup, include the output of your program and describe the observed differences between the data types. 
+
+Copy `Problem3.cpp` to `Problem4.cpp` and modify the new program to test additional data types:
+
+- `int`
+- `long int`
+- `unsigned long int`
+
+Make sure to extend the $f_n$ series far enough to find the overflow boundary. In your writeup, include the output of your program and describe the observed differences between the data types. Also, make sure to `git add/commit/push` your new `.cpp` file.
 
 ### Problem 4b
 *10 points*
-Modify the program (or write a new program) to find the actual maximum value for each data type, on your own computer. You might want to make an educated guess as a starting point (see <https://en.cppreference.com/cpp/language/types>), and focus your search on the known boundaries. Demonstrate the overflow behavior with `std::cout` statements, as in Problem 3. In your writeup, include the program output, state the maximum value for each type, and determine the number of bits used for each type.
+
+Modify the program (or write a new program) to find the actual maximum value for each data type, on your own computer. You might want to make an educated guess as a starting point (see <https://en.cppreference.com/cpp/language/types>), and focus your search on the known boundaries. Demonstrate the overflow behavior with `std::cout` statements, as in Problem 3. 
+
+In your writeup, include the program output, state the maximum value for each type, and determine the number of bits used for each type. Make sure to `git add/commit/push` your C++ code.
 
